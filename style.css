@@ -4,4 +4,9 @@ body {
 
 .list-name {
     cursor: pointer;
+    background-color: #fff0;
+}
+
+.list-name.selected {
+    
 }
