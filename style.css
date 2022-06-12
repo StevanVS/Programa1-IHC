@@ -7,6 +7,11 @@ body {
     background-color: #fff0;
 }
 
+.list-name:hover {
+    background-color: #fff6;
+
+}
+
 .list-name.selected {
-    
+    background-color: #fff6;
 }

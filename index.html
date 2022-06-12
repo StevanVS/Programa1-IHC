@@ -33,7 +33,7 @@
         <div class="row h-100">
             <div class="sidebar-all-lists col-3 bg-primary">
                 <ul class="task-lists list-group list-group-flush mt-3">
-                    <li class="list-name list-group-item mb-1 rounded fw-semibold">
+                    <li class="list-name list-group-item mb-1 rounded fw-semibold selected">
                         Mis tareas
                     </li>
                     <li class="list-name list-group-item mb-1 rounded fw-semibold">
@@ -54,10 +54,16 @@
                 <div class="todo-body col">
                     <ul class="tasks list-group list-group-flush">
                         <li class="task list-group-item bg-transparent border-top border-bottom">
-                            <input type="checkbox" id="task-1">
-                            <label for="task-1" class="ps-1">
+                            <input type="checkbox">
+                            <span class="ps-1" contenteditable="true">
+                                Programar
+                            </span>
+                            
+                            <!-- 
+                            <div class="ps-1 d-inline" contenteditable="true">
                                 Programar un todo
-                            </label>
+                            </div>
+                             -->
                         </li>
                         <li class="task list-group-item bg-transparent border-top border-bottom">
                             <input type="checkbox" id="task-2">
