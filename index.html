@@ -1,12 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Ahora estoy en master</h1>
+    <!-- 
+    <nav class="navbar navbar-expand-md bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </div>
+            </div>
+        </div>
+    </nav> -->
+
+
+
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <div class="sidebar-all-lists col-3 bg-primary">
+                <ul class="task-lists list-group list-group-flush mt-3">
+                    <li class="list-name list-group-item mb-1 rounded fw-bold">Mis tareas</li>
+                    <li class="list-name list-group-item mb-1 rounded">Proyectos</li>
+                </ul>
+            </div>
+            <div class="todo-list col row-cols-1 bg-light pt-3">
+                <div class="todo-header col border-bottom border-secondary mb-2">
+                    <h2 class="list-title ps-2">Mis tareas</h2>
+                </div>
+                <div class="new-task-creator col border-bottom border-secondary pb-2 mb-2">
+                    <input type="text" class="new-task form-control" placeholder="+ Nueva Tarea">
+                </div>
+                <div class="todo-body col">
+                    <ul class="tasks list-group list-group-flush">
+                        <li class="task list-group-item bg-transparent border-top border-bottom">
+                            <input type="checkbox" id="task-1">
+                            <label for="task-1" class="ps-1">
+                                Programar un todo
+                            </label>
+                        </li>
+                        <li class="task list-group-item bg-transparent border-top border-bottom">
+                            <input type="checkbox" id="task-2">
+                            <label for="task-2" class="ps-1">
+                                Práctica de AdmBD
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src=" bootstrap/bootstrap.bundle.min.js"> </script>
 </body>
+
 </html>
