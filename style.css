@@ -6,41 +6,45 @@ body {
     cursor: pointer;
     background-color: #fff0;
     color: #fff;
+   
 }
 
-.list-name.selected,
+.list-name.active-list,
 .list-name:hover {
     background-color: #fff3;
-
 }
 
-.btn-delete-list {
+.list-name span {
+     word-wrap: break-word;
+     max-width: 90%;
+}
+
+.delete-list-btn {
     display: none;
     --bs-btn-padding-y: .25rem;
     --bs-btn-padding-x: .4rem;
     --bs-btn-font-size: .6rem;
 }
 
-.list-name:hover .btn-delete-list {
+.list-name:hover .delete-list-btn {
     display: block;
 }
 
-.new-list,
-.new-list:focus {
+.new-list-input {
     background-color: #fff0;
     border: 0;
     width: 100%;
     outline: 0;
     color: #fff;
+    
 }
 
-.new-list::placeholder {
+.new-list-input::placeholder {
     color: #fff;
     opacity: 1;
 }
 
-.task-text,
-.task-text:focus {
+.task-text{
     border: 0;
     background-color: #fff0;
     width: 95%;
