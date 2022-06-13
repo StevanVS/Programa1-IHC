@@ -9,11 +9,20 @@ let lists = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || [];
 let selectedListId = localStorage.getItem(LOCAL_STORAGE_SELECTED_LIST_ID_KEY);
 
 listsContainer.addEventListener('click', e => {
-    if (e.target.tagName.toLowerCase() === 'button' &&
+    const elementTag = e.target.tagName.toLowerCase();
+
+    if (elementTag === 'li' || elementTag === 'span') {
+        selectedListId = e.target.getAttribute('listId');
+        saveAndRender();
+        return;
+    }
+
+    if (elementTag === 'button' &&
         e.target.getAttribute('listId')) {
         lists = lists.filter(list => list.id !== e.target.getAttribute('listId'));
         saveAndRender();
-      }
+        return;
+    }
 });
 
 newListForm.addEventListener('submit', e => {
@@ -50,14 +59,15 @@ function renderLists() {
     lists.forEach(list => {
         const listElement = document.importNode(listTemplate.content, true).querySelector('li');
 
-        listElement.dataset.listId = list.id;
+        listElement.setAttribute('listid', list.id);
         listElement.querySelector('span').innerText = list.name;
+        listElement.querySelector('span').setAttribute('listid', list.id);
         listElement.querySelector('button').setAttribute('listid', list.id);
 
-        listElement.addEventListener('click', e => {
-            selectedListId = list.id;
-            saveAndRender();
-        });
+        // listElement.addEventListener('click', e => {
+        //     selectedListId = list.id;
+        //     saveAndRender();
+        // });
 
         if (list.id === selectedListId) {
             listElement.classList.add('active-list');

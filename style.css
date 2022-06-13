@@ -16,18 +16,18 @@ body {
 
 .list-name span {
      word-wrap: break-word;
-     max-width: 90%;
+     width: 100%;
 }
 
 .delete-list-btn {
-    display: none;
+    visibility: hidden;
     --bs-btn-padding-y: .25rem;
     --bs-btn-padding-x: .4rem;
     --bs-btn-font-size: .6rem;
 }
 
 .list-name:hover .delete-list-btn {
-    display: block;
+    visibility: visible;
 }
 
 .new-list-input {
