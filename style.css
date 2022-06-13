@@ -6,7 +6,6 @@ body {
     cursor: pointer;
     background-color: #fff0;
     color: #fff;
-   
 }
 
 .list-name.active-list,
@@ -14,19 +13,18 @@ body {
     background-color: #fff3;
 }
 
-.list-name span {
-     word-wrap: break-word;
-     width: 100%;
-}
-
-.delete-list-btn {
+.delete-btn {
     visibility: hidden;
     --bs-btn-padding-y: .25rem;
     --bs-btn-padding-x: .4rem;
     --bs-btn-font-size: .6rem;
 }
 
-.list-name:hover .delete-list-btn {
+.list-name:hover .delete-btn {
+    visibility: visible;
+}
+
+.task:hover .delete-btn {
     visibility: visible;
 }
 
@@ -36,7 +34,6 @@ body {
     width: 100%;
     outline: 0;
     color: #fff;
-    
 }
 
 .new-list-input::placeholder {
@@ -44,9 +41,6 @@ body {
     opacity: 1;
 }
 
-.task-text{
-    border: 0;
-    background-color: #fff0;
-    width: 95%;
+.task-name {
     outline: 0;
 }
