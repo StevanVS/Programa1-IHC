@@ -31,46 +31,46 @@
 
     <div class="container-fluid h-100">
         <div class="row h-100">
-            <div class="sidebar-all-lists col-3 bg-primary">
-                <ul class="task-lists list-group list-group-flush mt-3">
-                    <li class="list-name list-group-item mb-1 rounded fw-semibold selected">
-                        Mis tareas
+            <!-- BARRA LATERAL -->
+            <div class="sidebar-all-lists col-3 bg-primary text-white">
+                <h4 class="mt-3">Listas</h4>
+                <ul class="task-lists list-group list-group-flush mt-3" data-lists>
+                    <li id="list-1" class="list-name list-group-item mb-1 rounded fw-semibold selected">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span>Mis tareas</span>
+                            <button type="button" class="btn-delete-list btn btn-danger" listid="list-1"
+                                data-delete-list-btn>X</button>
+                        </div>
                     </li>
-                    <li class="list-name list-group-item mb-1 rounded fw-semibold">
-                        Proyectos
-                    </li>
-                    <li class="list-name list-group-item mb-1 rounded fw-semibold">
-                        Finanzas
-                    </li>
+                    
                 </ul>
+                <div class="new-list-creator container mt-2">
+                    <form action="">
+                        <input type="text" class="new-list border-bottom" placeholder="+ Nueva Lista">
+                    </form>
+                </div>
             </div>
+            <!-- LISTA DE TAREAS -->
             <div class="todo-list col row-cols-1 bg-light pt-3">
                 <div class="todo-header col border-bottom border-secondary mb-2">
                     <h2 class="list-title ps-2">Mis tareas</h2>
                 </div>
                 <div class="new-task-creator col border-bottom border-secondary pb-2 mb-2">
-                    <input type="text" class="new-task form-control" placeholder="+ Nueva Tarea">
+                    <form action="">
+                        <input type="text" class="new-task form-control" placeholder="+ Nueva Tarea">
+                    </form>
                 </div>
                 <div class="todo-body col">
                     <ul class="tasks list-group list-group-flush">
                         <li class="task list-group-item bg-transparent border-top border-bottom">
                             <input type="checkbox">
-                            <span class="ps-1" contenteditable="true">
-                                Programar
-                            </span>
-                            
-                            <!-- 
-                            <div class="ps-1 d-inline" contenteditable="true">
-                                Programar un todo
-                            </div>
-                             -->
+                            <input type="text" class="task-text ps-1" value="Programar un todo">
                         </li>
                         <li class="task list-group-item bg-transparent border-top border-bottom">
-                            <input type="checkbox" id="task-2">
-                            <label for="task-2" class="ps-1">
-                                Práctica de AdmBD
-                            </label>
+                            <input type="checkbox">
+                            <input type="text" class="task-text ps-1" value="Prácticar AdmBD">
                         </li>
+
                     </ul>
                 </div>
             </div>
@@ -79,9 +79,17 @@
     </div>
 
 
+    <template id="list-template">
+        <li class="list-name list-group-item mb-1 rounded fw-semibold selected">
+            <div class="d-flex justify-content-between align-items-center">
+                <span></span>
+                <button type="button" class="btn-delete-list btn btn-danger btn-sm">X</button>
+            </div>
+        </li>
+    </template>
 
 
-
+    <script src="script.js" type="module"></script>
     <script src=" bootstrap/bootstrap.bundle.min.js"> </script>
 </body>
 
